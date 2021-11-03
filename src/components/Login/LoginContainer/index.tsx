@@ -1,7 +1,11 @@
 import * as S from './style'
-import image from '../../assets/image.png'
-import { LoginBox } from '../../components/loginBox'
-export function Login() {
+import image from '../../../assets/login.svg'
+import { ReactNode } from 'react';
+type LoginProps = {
+    children: ReactNode;
+  };
+  
+export function LoginContainer({ children }: LoginProps) {
     return (
         <S.Container>
             <S.Left>
@@ -14,7 +18,7 @@ export function Login() {
                 </S.Image>
             </S.Left>
             <S.Right>
-                <LoginBox />
+                {children}
             </S.Right>
         </S.Container>
     )   

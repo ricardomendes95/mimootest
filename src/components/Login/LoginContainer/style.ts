@@ -10,13 +10,16 @@ export const Left =styled.div`
     flex-direction: column;
     align-content: space-between;
     background: #00C3A3;
+    width: 100%;
+    height: 100vh;
 `
 export const Content = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
-    
+    justify-content: center;
+    width: 100%;
+    height: 50%;
     h1 { 
         font-weight: 900;
         color: white;
@@ -35,7 +38,10 @@ export const Content = styled.div`
 export const Image = styled.div`
     display: flex;
    align-self: flex-end;
-    
+   width: 100%;
+    img {
+        width: 95%;
+    }
 `
 export const Right = styled.div`
     display: flex;

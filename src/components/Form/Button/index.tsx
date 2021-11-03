@@ -1,7 +1,15 @@
 import * as S from './styles'
-
-export function Button() {
+export type ButtonProps = {
+    label?: string;
+    width: string;
+    onClick?: ()=> void;
+  }
+export function Button({
+    label,
+    width,
+    ...props
+  }: ButtonProps) {
     return(
-       <S.Button>Entrar</S.Button>
+       <S.Button width={width} {...props}>{label}</S.Button>
     )
 }
