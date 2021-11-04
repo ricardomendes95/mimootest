@@ -1,12 +1,15 @@
+import { ButtonHTMLAttributes } from 'react'
+
 import * as S from './styles'
+
 export type ButtonProps = {
     label?: string;
     width: string;
-    onClick?: ()=> void;
-  }
+  } & ButtonHTMLAttributes<HTMLButtonElement>;
+  
 export function Button({
-    label,
-    width,
+    label = 'button',
+    width = '250px',
     ...props
   }: ButtonProps) {
     return(

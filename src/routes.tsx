@@ -1,6 +1,6 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import { Login } from './pages/Login/Auth'
-import { Recover } from './pages/Login/Recover'
+import { Login } from './pages/Auth'
+import { Recover } from './pages/Recover'
 
 export function Routes() {
     return(

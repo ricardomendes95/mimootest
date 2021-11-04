@@ -1,11 +1,11 @@
 import * as S from './style'
-import image from '../../../assets/login.svg'
+import image from '../../assets/login.svg'
 import { ReactNode } from 'react';
 type LoginProps = {
     children: ReactNode;
   };
   
-export function LoginContainer({ children }: LoginProps) {
+export function LoginLayout({ children }: LoginProps) {
     return (
         <S.Container>
             <S.Left>
