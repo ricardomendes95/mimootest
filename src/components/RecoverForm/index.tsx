@@ -1,11 +1,11 @@
-import { Input } from "../Form/Input/index";
-import Logo from "../../assets/logo.svg";
-import { Button } from "../Form/Button";
-import * as S from "./style";
 import { useState } from "react";
 import { useHistory } from "react-router";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { Input } from "../Form/Input/index";
+import Logo from "../../assets/logo.svg";
+import { Button } from "../Form/Button";
+import * as S from "./style";
 
 import schema, { FormProps } from "./validators";
 

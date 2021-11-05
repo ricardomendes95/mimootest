@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import schema, { FormProps } from "./validators";
+import { Link, useHistory } from "react-router-dom";
 
 import { Input } from "../Form/Input/index";
 import Logo from "../../assets/logo.svg";
@@ -16,8 +17,13 @@ export function LoginForm() {
     handleSubmit,
   } = useForm({ resolver: yupResolver(schema) });
 
+  const history = useHistory();
+
   function handleLogin(data: FormProps) {
-    setLabelButton(labelButton === "Entrar" ? "...Carregando" : "Entrar");
+    setLabelButton(labelButton === "Entrar" ? "Carregando..." : "Entrar");
+    setTimeout(() => {
+      history.push("/dashboard");
+    }, 500);
   }
 
   return (
@@ -40,7 +46,7 @@ export function LoginForm() {
         width="480px"
         type="password"
       />
-      <a href="/recover">Esqueceu a senha?</a>
+      <Link to="/recover">Esqueceu a senha?</Link>
       <Button width="480px" label={labelButton} type="submit" />
     </S.Form>
   );
