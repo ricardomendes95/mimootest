@@ -1,4 +1,5 @@
 import { Story, Meta } from "@storybook/react/types-6-0";
+import { MemoryRouter } from "react-router-dom";
 
 import { LoginForm } from ".";
 
@@ -8,5 +9,7 @@ export default {
 } as Meta;
 
 export const Basic: Story = () => (
-  <LoginForm/>
+  <MemoryRouter>
+    <LoginForm/>
+  </ MemoryRouter>
 );
